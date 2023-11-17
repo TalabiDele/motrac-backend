@@ -4,5 +4,5 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  url: "http://localhost:1337",
+  url: "https://motrac-backend-production.up.railway.app",
 });
