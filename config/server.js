@@ -4,5 +4,5 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  url: "https://motrac-backend-production.up.railway.app",
+  // url: "https://motrac-backend-production.up.railway.app",
 });
