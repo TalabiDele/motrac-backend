@@ -2,7 +2,7 @@ const { parse } = require("pg-connection-string");
 
 module.exports = ({ env }) => {
   const { host, port, database, user, password } =
-    "https://motrac-backend-production.up.railway.app/";
+    "postgresql://postgres:3CFbB2f6eFD1ae3FaDC-2eEbG5DFeDbC@:/railway";
 
   return {
     connection: {
