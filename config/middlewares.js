@@ -25,27 +25,8 @@ module.exports = [
         },
       },
     },
-    // gzip: {
-    //   enabled: true,
-    //   options: {
-    //     br: false,
-    //   },
-    // },
-    // settings: {
-    //   cors: {
-    //     origin: ["*"], //allow all
-    //   },
-    // },
   },
 
-  // settings: {
-  //   cors: {
-  //     origin: ['*'], //allow all origins
-  //     headers: ['*'], //allow all headers
-  //   },
-  // },
-
-  // "strapi::security",
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
@@ -53,15 +34,5 @@ module.exports = [
   "strapi::body",
   "strapi::favicon",
   "strapi::public",
-
-  // 'strapi::errors',
-  // 'strapi::security',
-  // 'strapi::cors',
-  // 'strapi::poweredBy',
-  // 'strapi::logger',
-  // 'strapi::query',
-  // 'strapi::body',
-  // 'strapi::session',
-  // 'strapi::favicon',
-  // 'strapi::public',
+  "strapi::session",
 ];
