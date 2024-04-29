@@ -14,37 +14,37 @@
 //   },
 // });
 
-// const { parse } = require("pg-connection-string");
+const { parse } = require("pg-connection-string");
 
-// module.exports = ({ env }) => {
-//   const { host, port, database, user, password } =
-//     "postgresql://postgres:3CFbB2f6eFD1ae3FaDC-2eEbG5DFeDbC@roundhouse.proxy.rlwy.net:26838/railway";
+module.exports = ({ env }) => {
+  const { host, port, database, user, password } =
+    "postgresql://postgres:3CFbB2f6eFD1ae3FaDC-2eEbG5DFeDbC@roundhouse.proxy.rlwy.net:26838/railway";
 
-//   // "postgresql://postgres:3CFbB2f6eFD1ae3FaDC-2eEbG5DFeDbC@roundhouse.proxy.rlwy.net:26838/railway"
+  // "postgresql://postgres:3CFbB2f6eFD1ae3FaDC-2eEbG5DFeDbC@roundhouse.proxy.rlwy.net:26838/railway"
 
-//   return {
-//     connection: {
-//       client: "postgres",
-//       connection: {
-//         host: env("PGHOST", "127.0.0.1"),
-//         port: env.int("PGPORT", 5432),
-//         database: env("PGDATABASE", "strapi"),
-//         user: env("PGUSER", "strapi"),
-//         password: env("PGPASSWORD", "password"),
-//         ssl: env.bool(true),
-//       },
-//       pool: { min: 0 },
-//       debug: false,
-//     },
-//   };
-// };
-
-module.exports = ({ env }) => ({
-  connection: {
-    client: "postgres",
+  return {
     connection: {
-      connectionString: env("DATABASE_PRIVATE_URL"),
+      client: "postgres",
+      connection: {
+        host: env("PGHOST", "127.0.0.1"),
+        port: env.int("PGPORT", 5432),
+        database: env("PGDATABASE", "strapi"),
+        user: env("PGUSER", "strapi"),
+        password: env("PGPASSWORD", "password"),
+        ssl: env.bool(true),
+      },
+      pool: { min: 0 },
+      debug: false,
     },
-    pool: { min: 0 },
-  },
-});
+  };
+};
+
+// module.exports = ({ env }) => ({
+//   connection: {
+//     client: "postgres",
+//     connection: {
+//       connectionString: env("DATABASE_PRIVATE_URL"),
+//     },
+//     pool: { min: 0 },
+//   },
+// });
