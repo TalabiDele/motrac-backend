@@ -1,5 +1,9 @@
 module.exports = ({ env }) => ({
+  host: env("HOST", "0.0.0.0"),
+  port: 1337,
+  app: {
+    keys: env.array("APP_KEYS"),
+  },
   url: "https://motrac-backend-production.up.railway.app",
-  // url: "http://127.0.0.1:1337",
-  // url: env("RENDER_EXTERNAL_URL"),
+  proxy: true,
 });
